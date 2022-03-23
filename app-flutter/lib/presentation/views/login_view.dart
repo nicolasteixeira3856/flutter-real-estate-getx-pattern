@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../presentation/view_models/login_view_model.dart';
+import '../../presentation/view_model/login_view_model.dart';
 
 class LoginView extends GetWidget<LoginViewModel> {
   const LoginView({Key? key}) : super(key: key);

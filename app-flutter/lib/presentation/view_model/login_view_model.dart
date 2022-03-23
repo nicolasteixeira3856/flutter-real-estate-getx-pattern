@@ -1,5 +1,9 @@
+import 'dart:developer';
+
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:real_estate/data/model/login_model.dart';
+import 'package:real_estate/data/repository/login_repository.dart';
 import 'package:string_validator/string_validator.dart';
 
 class LoginViewModel extends GetxController {
@@ -7,6 +11,7 @@ class LoginViewModel extends GetxController {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   RxBool switchLogin = false.obs;
+  LoginRepository loginRepository = Get.find();
 
   changeSwitchLogin() => switchLogin.toggle().value;
 
@@ -29,8 +34,16 @@ class LoginViewModel extends GetxController {
 
   validateForm() {
     if (formKey.currentState!.validate()) {
-      print(emailController.value.text);
-      print(passwordController.value.text);
+      makeLogin();
     }
+  }
+
+  makeLogin() {
+    final response = loginRepository.makeLogin(LoginModel(
+        token: '',
+        email: emailController.value.text,
+        password: passwordController.value.text));
+
+    log(response.toString(), name: 'responseapi');
   }
 }
