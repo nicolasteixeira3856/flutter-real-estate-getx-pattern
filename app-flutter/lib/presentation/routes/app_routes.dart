@@ -10,11 +10,3 @@ appRoutes() => [
           transitionDuration: const Duration(milliseconds: 500),
           binding: LoginBinding()),
     ];
-
-// class MyMiddelware extends GetMiddleware {
-//   @override
-//   GetPage? onPageCalled(GetPage? page) {
-//     print(page?.name);
-//     return super.onPageCalled(page);
-//   }
-// }
