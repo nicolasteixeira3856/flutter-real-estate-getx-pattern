@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../presentation/view_model/login_view_model.dart';
+import 'login_view_model.dart';
 
-class LoginView extends GetWidget<LoginViewModel> {
-  const LoginView({Key? key}) : super(key: key);
+class LoginPage extends GetWidget<LoginViewModel> {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

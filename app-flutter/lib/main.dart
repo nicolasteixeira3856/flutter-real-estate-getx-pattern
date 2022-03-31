@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:real_estate/presentation/routes/app_routes.dart';
+import 'package:real_estate/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 void main() {

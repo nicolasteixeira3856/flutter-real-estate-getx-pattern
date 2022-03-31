@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:real_estate/data/model/user_model.dart';
-import 'package:real_estate/data/repository/user_repository.dart';
+import 'package:real_estate/data/model/login_model.dart';
+import 'package:real_estate/data/repository/login_repository.dart';
 import 'package:string_validator/string_validator.dart';
 
 class LoginViewModel extends GetxController {
@@ -11,7 +11,7 @@ class LoginViewModel extends GetxController {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   RxBool switchLogin = false.obs;
-  UserRepository loginRepository = Get.find();
+  LoginRepository loginRepository = Get.find();
 
   changeSwitchLogin() => switchLogin.toggle().value;
 
@@ -39,8 +39,7 @@ class LoginViewModel extends GetxController {
   }
 
   makeLogin() {
-    final response = loginRepository.makeLogin(UserModel(
-        token: '',
+    final response = loginRepository.makeLogin(LoginModel(
         email: emailController.value.text,
         password: passwordController.value.text));
 
