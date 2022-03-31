@@ -7,11 +7,14 @@ import 'package:real_estate/data/repository/login_repository.dart';
 import 'package:string_validator/string_validator.dart';
 
 class LoginViewModel extends GetxController {
+  final LoginRepository loginRepository;
+
+  LoginViewModel({required this.loginRepository});
+
   final formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   RxBool switchLogin = false.obs;
-  LoginRepository loginRepository = Get.find();
 
   changeSwitchLogin() => switchLogin.toggle().value;
 
