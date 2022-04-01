@@ -41,11 +41,12 @@ class LoginViewModel extends GetxController {
     }
   }
 
-  makeLogin() {
-    final response = loginRepository.makeLogin(LoginModel(
+  makeLogin() async {
+    final response = await loginRepository.makeLogin(LoginModel(
         email: emailController.value.text,
         password: passwordController.value.text));
 
-    log(response.toString(), name: 'responseapi');
+
+    log(response.token, name: 'responseapi');
   }
 }

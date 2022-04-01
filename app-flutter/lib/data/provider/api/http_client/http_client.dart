@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:real_estate/data/provider/api/http_client/i_http_client.dart';
+import 'package:real_estate/core/utils/constants.dart';
 
 class HttpClient implements IHttpClient {
   @override
@@ -51,4 +52,6 @@ class HttpClient implements IHttpClient {
         statusCode: response.statusCode,
         header: header);
   }
+
+  String get apiUrl => Constants.apiUrl;
 }

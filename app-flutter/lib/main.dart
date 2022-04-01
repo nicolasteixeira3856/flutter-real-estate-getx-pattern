@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate/core/initial_binding.dart';
 import 'package:real_estate/routes/app_pages.dart';
 import 'package:get/get.dart';
 import 'package:real_estate/routes/app_routes.dart';
@@ -15,6 +16,7 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       smartManagement: SmartManagement.full,
+      initialBinding: InitialBinding(),
       title: 'Real Estate',
       initialRoute: AppRoutes.login,
       getPages: AppPages.pages,
