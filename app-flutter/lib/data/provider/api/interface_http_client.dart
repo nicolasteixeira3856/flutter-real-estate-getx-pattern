@@ -1,4 +1,6 @@
 abstract class IHttpClient {
+  String apiUrl();
+
   Future<HttpClientResponse> get(
       {required String url, required Map<String, String> header});
 
@@ -16,7 +18,6 @@ abstract class IHttpClient {
       {required String url,
       required Map<String, String> header,
       required Map<String, dynamic> body});
-
 }
 
 class HttpClientResponse {
