@@ -1,4 +1,4 @@
 class Constants {
   static const String apiUrl =
-      'https://3d03-2804-1b3-6002-44f6-645c-b025-fb64-a9e2.ngrok.io';
+      'https://60a0-2804-1b3-6002-8294-f1fb-53e7-86a3-552e.ngrok.io';
 }
